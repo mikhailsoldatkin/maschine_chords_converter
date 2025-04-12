@@ -6,12 +6,12 @@ Go.
 
 ## Table of contents
 
-- [Folder Structure](#folder-structure)
-- [Naming Format for Chord Set Folders](#naming-format-for-chord-set-folders)
-- [Naming Format for MIDI Files](#naming-format-for-midi-files)
-- [Processing Procedure](#processing-procedure)
-- [Output Files](#output-files)
-- [How to Run the Utility](#how-to-run-the-utility)
+- [Folder structure](#folder-structure)
+- [Naming format for chord set folders](#naming-format-for-chord-set-folders)
+- [Naming format for MIDI files](#naming-format-for-midi-files)
+- [Processing procedure](#processing-procedure)
+- [Output files](#output-files)
+- [How to run the utility](#how-to-run-the-utility)
 
 ## Folder structure
 
