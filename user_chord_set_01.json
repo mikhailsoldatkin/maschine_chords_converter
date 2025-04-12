@@ -1,0 +1,107 @@
+{
+    "chords": [
+        {
+            "name": "Amin",
+            "notes": [
+                -15,
+                -3,
+                0,
+                4
+            ]
+        },
+        {
+            "name": "Amin7",
+            "notes": [
+                -15,
+                -3,
+                4,
+                7,
+                12
+            ]
+        },
+        {
+            "name": "Amin9",
+            "notes": [
+                -3,
+                0,
+                4,
+                7,
+                11
+            ]
+        },
+        {
+            "name": "Dmin7",
+            "notes": [
+                -10,
+                -3,
+                2,
+                5,
+                12
+            ]
+        },
+        {
+            "name": "Emin",
+            "notes": [
+                -20,
+                -8,
+                -5,
+                -1
+            ]
+        },
+        {
+            "name": "Emin7",
+            "notes": [
+                -8,
+                -1,
+                4,
+                7,
+                14
+            ]
+        },
+        {
+            "name": "Fmaj7",
+            "notes": [
+                -7,
+                -3,
+                4,
+                5,
+                12
+            ]
+        },
+        {
+            "name": "Fmaj",
+            "notes": [
+                -19,
+                -7,
+                -3,
+                0
+            ]
+        },
+        {
+            "name": "Dmin9",
+            "notes": [
+                -10,
+                -7,
+                -3,
+                0,
+                4
+            ]
+        },
+        {
+            "name": "Chd 10",
+            "notes": []
+        },
+        {
+            "name": "Chd 11",
+            "notes": []
+        },
+        {
+            "name": "Chd 12",
+            "notes": []
+        }
+    ],
+    "name": "mySet Am",
+    "typeId": "native-instruments-chord-set",
+    "uuid": "b5d1773a-e2c6-5064-bb8a-0032d1517ede",
+    "version": "1.0.0"
+}

@@ -37,6 +37,7 @@ const (
 	minChordNumber      = 1
 	maxChordNumber      = 12
 	maxSetNumber        = 16
+	debug               = false
 )
 
 var setNumber = 1
@@ -55,6 +56,10 @@ func main() {
 	exeDir := getExecutableDir()
 	setsFolder := filepath.Join(exeDir, "sets")
 
+	if debug {
+		setsFolder = "./sets"
+	}
+
 	if err := filepath.WalkDir(setsFolder, func(path string, dir fs.DirEntry, err error) error {
 		if err != nil {
 			return err
@@ -69,10 +74,13 @@ func main() {
 		fmt.Println("Directory traversal error:", err)
 	}
 
-	fmt.Println("Processing complete. Press Enter to exit...")
-	if _, err := fmt.Scanln(); err != nil {
-		fmt.Println("Error reading input:", err)
+	if debug {
+		fmt.Println("Processing complete.")
+		return
 	}
+
+	fmt.Println("Processing complete. Press Enter to exit...")
+	_, _ = fmt.Scanln()
 }
 
 func processChordSet(path, currentSet, setsFolder string) {
