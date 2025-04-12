@@ -107,7 +107,7 @@ skipped.
    the [naming rules for chord sets](#naming-format-for-chord-set-folders).
 3. In each subfolder, place up to 12 MIDI files following
    the [naming rules for MIDI files](#naming-format-for-midi-files).
-4. Place the utility file **maschine_chords_converter** in the same folder as the **sets** folder.
+4. Place the utility file **maschine_chords_converter** (for Windows: **maschine_chords_converter.exe**) in the same folder as the **sets** folder.
 5. Run the utility by double-clicking the file.
 6. The utility will start processing and display messages in the console:
     - messages indicating the processing of each chord set.
