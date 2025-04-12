@@ -19,15 +19,18 @@ The utility expects the following structure:
 
 ```
 ├── maschine_chords_converter (utility file)
-└── sets/ (folder with chord sets)
-├── Set 1/ (folder with MIDI chord files)
-│ ├── 1 Cmin.mid (midi file with one chord)
-│ ├── 2 Dmin.mid
-│ └── ...
-├── Set 2/
-│ ├── 1 Emaj.mid
-│ └── ...
-└── ...
+│ 
+├── sets (folder with chord sets)
+│ 
+├───── Set 1 (folder with MIDI chord files)
+│        ├── 1 Cmin.mid (midi file with one chord)
+│        ├── 2 Dmin.mid
+│        └── ...
+│ 
+├───── Some Set
+│        ├── 1 Emaj.mid
+│        └── ...
+└──── Other Set ...
 ```
 
 ## Naming format for chord set folders
