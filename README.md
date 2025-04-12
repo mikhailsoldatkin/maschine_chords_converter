@@ -102,23 +102,23 @@ skipped.
 
 ## How to run the utility
 
-1. Create a folder named **"sets"** anywhere on your computer.
-2. Inside the **sets** folder, create up to 16 subfolders, which will be your chord sets, following
+1. From "Releases" download **maschine_chords_converter** file (for Windows: **maschine_chords_converter.exe**).
+2. Create a folder named **"sets"** anywhere on your computer.
+3. Inside the **sets** folder, create up to 16 subfolders, which will be your chord sets, following
    the [naming rules for chord sets](#naming-format-for-chord-set-folders).
-3. In each subfolder, place up to 12 MIDI files following
+4. In each subfolder, place up to 12 MIDI files following
    the [naming rules for MIDI files](#naming-format-for-midi-files).
-4. Place the utility file **maschine_chords_converter** (for Windows: **maschine_chords_converter.exe**) in the same
-   folder as the **sets** folder.
-5. Run the utility by double-clicking the file.
-6. The utility will start processing and display messages in the console:
+5. Place the utility file in the same folder as the **sets** folder.
+6. Run the utility by double-clicking the file.
+7. The utility will start processing and display messages in the console:
     - messages indicating the processing of each chord set.
     - error messages for any files that do not match the format.
-7. Upon completion, the console will display the message: "Processing complete. Press Enter to exit...". Press Enter to
-   close the program.
-8. Copy the generated JSON files to the following path:
+8. Upon completion, the console will display the message: "Processing complete. Press Enter to exit...". Press Enter to
+   exit the program.
+9. Copy the generated JSON files to the following path:
     - **Mac:** `/Users/username/Library/Application Support/Native Instruments/Shared/User Chords`
     - **Windows:** `C:\Users\username\AppData\Local\Native Instruments\Shared\User Chords\`
-9. Open Maschine 3.0, load the chord sets, and start creating music.
+10. Open Maschine 3.0, load the chord sets, and start creating music.
 
 ## Platform limitations
 
