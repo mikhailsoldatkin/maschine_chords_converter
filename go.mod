@@ -1,4 +1,4 @@
-module chords_gen
+module maschine_chords_converter
 
 go 1.24
 
