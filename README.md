@@ -30,6 +30,7 @@ The utility expects the following structure:
 ├───── Some Set
 │        ├── 1 Emaj.mid
 │        └── ...
+│ 
 └───── Other Set ...
 ```
 
