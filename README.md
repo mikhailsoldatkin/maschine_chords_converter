@@ -98,7 +98,7 @@ skipped.
 
 ## How to run the utility
 
-1. Create a **sets** folder anywhere on your computer.
+1. Create a folder named **"sets"** anywhere on your computer.
 2. Inside the **sets** folder, create up to 16 subfolders with chord sets following
    the [naming rules for chord sets](#naming-format-for-chord-set-folders).
 3. In each subfolder, place up to 12 MIDI files following
