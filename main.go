@@ -29,37 +29,53 @@ type ChordSet struct {
 }
 
 const (
-	setsFolder          = "./sets"
 	version             = "1.0.0"
 	midiExtension       = ".mid"
 	baseChordName       = "Chd" // for empty chords
 	baseNote            = 60    // C3
-	maxSetFolderNameLen = 10    // max len of set's folder name
+	maxSetFolderNameLen = 10    // maximum length of set folder name
 	minChordNumber      = 1
 	maxChordNumber      = 12
 )
 
 var setNumber = 1
 
+// getExecutableDir returns the directory of the executable file.
+func getExecutableDir() string {
+	exePath, err := os.Executable()
+	if err != nil {
+		fmt.Println("Error determining executable path:", err)
+		return ""
+	}
+	return filepath.Dir(exePath)
+}
+
 func main() {
-	root := setsFolder
-	if err := filepath.WalkDir(root, func(path string, dir fs.DirEntry, err error) error {
+	exeDir := getExecutableDir()
+	setsFolder := filepath.Join(exeDir, "sets")
+
+	if err := filepath.WalkDir(setsFolder, func(path string, dir fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 
-		if dir.IsDir() && path != root && len(dir.Name()) <= maxSetFolderNameLen {
-			processChordSet(path, dir.Name())
+		if dir.IsDir() && path != setsFolder && len(dir.Name()) <= maxSetFolderNameLen {
+			processChordSet(path, dir.Name(), setsFolder)
 		}
 
 		return nil
 	}); err != nil {
-		fmt.Println("directory traversal error:", err)
+		fmt.Println("Directory traversal error:", err)
+	}
+
+	fmt.Println("Processing complete. Press Enter to exit...")
+	if _, err := fmt.Scanln(); err != nil {
+		fmt.Println("Error reading input:", err)
 	}
 }
 
-func processChordSet(path, folderName string) {
-	fmt.Println("processing set:", folderName)
+func processChordSet(path, currentSet, setsFolder string) {
+	fmt.Println("Processing set:", currentSet)
 
 	if setNumber > maxChordNumber {
 		return
@@ -97,13 +113,13 @@ func processChordSet(path, folderName string) {
 
 		return nil
 	}); err != nil {
-		fmt.Printf("error processing MIDI files: %v\n", err)
+		fmt.Printf("Error processing MIDI files: %v\n", err)
 		return
 	}
 
 	output := ChordSet{
 		Chords:  chords,
-		Name:    folderName,
+		Name:    currentSet,
 		UUID:    generateUUID(),
 		TypeID:  "native-instruments-chord-set",
 		Version: version,
@@ -111,16 +127,17 @@ func processChordSet(path, folderName string) {
 
 	jsonData, err := json.MarshalIndent(output, "", "    ")
 	if err != nil {
-		fmt.Printf("error marshaling JSON for %s: %v\n", path, err)
+		fmt.Printf("Error marshaling JSON for %s: %v\n", path, err)
 		return
 	}
 
-	outFile := filepath.Join(setsFolder, fmt.Sprintf("user_chord_set_0%d.json", setNumber))
+	outFile := filepath.Join(filepath.Dir(setsFolder), fmt.Sprintf("user_chord_set_0%d.json", setNumber))
 	if err = os.WriteFile(outFile, jsonData, 0644); err != nil {
-		fmt.Printf("error writing json file %s: %v\n", outFile, err)
+		fmt.Printf("Error writing JSON file %s: %v\n", outFile, err)
 		return
 	}
-	fmt.Println("generated file:", outFile)
+
+	fmt.Println("Generated file:", outFile)
 
 	setNumber++
 }
@@ -158,7 +175,7 @@ func readMidiNotes(path string) []int {
 
 	err := reader.ReadSMFFile(rd, path)
 	if err != nil {
-		fmt.Printf("failed to read MIDI file %s, error: %s", path, err)
+		fmt.Printf("Failed to read MIDI file %s, error: %s", path, err)
 	}
 
 	var relative []int
