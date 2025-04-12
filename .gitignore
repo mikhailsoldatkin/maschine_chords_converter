@@ -6,13 +6,14 @@
 go.work
 go.work.sum
 .env
-/maschine_chords_converter
-/maschine_chords_converter.exe
-
-# *.mid
 
 # IDE
 .idea/
 *.iml
 *.ipr
 *.iws
+
+/sets/
+
+/maschine_chords_converter
+/maschine_chords_converter.exe
