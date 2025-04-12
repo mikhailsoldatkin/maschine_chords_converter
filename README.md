@@ -103,15 +103,15 @@ skipped.
 ## How to run the utility
 
 1. Create a folder named **"sets"** anywhere on your computer.
-2. Inside the **sets** folder, create up to 16 subfolders with chord sets following
+2. Inside the **sets** folder, create up to 16 subfolders, which will be your chord sets, following
    the [naming rules for chord sets](#naming-format-for-chord-set-folders).
 3. In each subfolder, place up to 12 MIDI files following
    the [naming rules for MIDI files](#naming-format-for-midi-files).
 4. Place the utility file **maschine_chords_converter** in the same folder as the **sets** folder.
 5. Run the utility by double-clicking the file.
 6. The utility will start processing and display messages in the console:
-    - Messages indicating the processing of each chord set.
-    - Error messages for any files that do not match the format.
+    - messages indicating the processing of each chord set.
+    - error messages for any files that do not match the format.
 7. Upon completion, the console will display the message: "Processing complete. Press Enter to exit...". Press Enter to
    close the program.
 8. Copy the generated JSON files to the following path:
