@@ -245,7 +245,12 @@ func (c *Converter) outputJsonFiles() error {
 			return fmt.Errorf("error marshaling JSON for %s: %w", chordSet.Name, err)
 		}
 
-		outFile := filepath.Join(filepath.Dir(c.setsFolder), fmt.Sprintf("user_chord_set_0%d.json", i+1))
+		outFolder := c.setsFolder // same folder
+		if c.debug {
+			outFolder = filepath.Dir(c.setsFolder) // one level above
+		}
+
+		outFile := filepath.Join(outFolder, fmt.Sprintf("user_chord_set_0%d.json", i+1))
 		if err = os.WriteFile(outFile, jsonData, 0644); err != nil {
 			return fmt.Errorf("error writing JSON file %s: %w", outFile, err)
 		}
