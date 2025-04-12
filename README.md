@@ -112,7 +112,7 @@ skipped.
    close the program.
 8. Copy the generated JSON files to the following path:
     - **Mac:** `/Users/username/Library/Application Support/Native Instruments/Shared/User Chords`
-    - **Windows:** `...` // TODO
+    - **Windows:** `C:\Users\username\AppData\Local\Native Instruments\Shared\User Chords\`
 9. Open Maschine 3.0, load the chord sets, and start creating music.
 
 ## Platform Limitations
