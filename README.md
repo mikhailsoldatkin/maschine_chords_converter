@@ -121,5 +121,5 @@ The program has been tested only on MacOS. Using on other operating systems is n
 
 ## Authors and Notes
 
-**Maschine Chords Converter** is created by [Mikhail Soldatkin (c) 2025].  
+**Maschine Chords Converter** is created by Mikhail Soldatkin (c) 2025.  
 **Maschine** is a trademark of **Native Instruments**.
