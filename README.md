@@ -32,7 +32,7 @@ The utility expects the following structure:
 
 ## Naming format for chord set folders
 
-The folder name for each chord set must not exceed 8 characters. On the Maschine display, only 8 characters of
+The folder name for each chord set must not exceed 10 characters. On the Maschine display, only 10 characters of
 the chord set name are shown.  
 *Note: Maschine "shortens" names if their length exceeds the limit (e.g., "Very Long Set Name" becomes "VryLngSt").*
 
@@ -69,7 +69,7 @@ skipped.
 ## Processing procedure
 
 1. **Folder Scanning:**  
-   The utility begins by scanning the **sets** folder for all subfolders whose names do not exceed 8 characters.
+   The utility begins by scanning the **sets** folder for all subfolders whose names do not exceed 10 characters.
 
 2. **Processing Each Chord Set (Subfolder):**  
    For each subfolder found:

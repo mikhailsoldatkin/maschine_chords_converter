@@ -33,7 +33,7 @@ const (
 	midiExtension       = ".mid"
 	baseChordName       = "Chd" // for empty chords
 	baseNote            = 60    // C3
-	maxSetFolderNameLen = 8     // maximum length of set folder name
+	maxSetFolderNameLen = 10    // maximum length of set folder name
 	minChordNumber      = 1
 	maxChordNumber      = 12
 	maxSetNumber        = 16
