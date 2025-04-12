@@ -23,7 +23,7 @@ The utility expects the following structure:
 ├── sets (folder with chord sets)
 │ 
 ├───── Set 1 (folder with MIDI chord files)
-│        ├── 1 Cmin.mid (midi file with one chord)
+│        ├── 1 Cmin.mid (MIDI file with one chord)
 │        ├── 2 Dmin.mid
 │        └── ...
 │ 
