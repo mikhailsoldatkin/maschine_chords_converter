@@ -7,7 +7,7 @@ import (
 	"maschine_chords_converter/internal/converter"
 )
 
-const debug = true // if true, the local folder "./sets" is used, for development purposes
+const debug = false // if true, the local folder "./sets" is used, for development purposes
 
 func main() {
 	c := converter.New()
