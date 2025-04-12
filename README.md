@@ -94,7 +94,7 @@ skipped.
 
 ## Output files
 
-- The generated JSON files are saved in the parent directory relative to the **sets** folder.
+- The generated JSON files are saved in the same folder where the **sets** folder is located.
 - The file name is generated using the following pattern:  
   `user_chord_set_0X.json`  
   where **X** is the sequential number of the processed chord set.
