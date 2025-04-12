@@ -4,7 +4,7 @@
 These files then can be loaded into the Maschine 3.0 application from Native Instruments. Utility is implemented using
 Go.
 
-## Table of Contents
+## Table of contents
 
 - [Folder Structure](#folder-structure)
 - [Naming Format for Chord Set Folders](#naming-format-for-chord-set-folders)
@@ -13,7 +13,7 @@ Go.
 - [Output Files](#output-files)
 - [How to Run the Utility](#how-to-run-the-utility)
 
-## Folder Structure
+## Folder structure
 
 The utility expects the following structure:
 
@@ -30,7 +30,7 @@ The utility expects the following structure:
 └── ...
 ```
 
-## Naming Format for Chord Set Folders
+## Naming format for chord set folders
 
 The folder name for each chord set must not exceed 8 characters. On the Maschine display, only 8 characters of
 the chord set name are shown.  
@@ -42,7 +42,7 @@ the chord set name are shown.
 - `set F#m`
 - `house Gm`
 
-## Naming Format for MIDI Files
+## Naming format for MIDI files
 
 Within each chord set folder, MIDI files must be named in the following format:
 
@@ -66,7 +66,7 @@ Within each chord set folder, MIDI files must be named in the following format:
 If a file does not meet this format (e.g., the number is out of range or the formatting is incorrect), it will be
 skipped.
 
-## Processing Procedure
+## Processing procedure
 
 1. **Folder Scanning:**  
    The utility begins by scanning the **sets** folder for all subfolders whose names do not exceed 8 characters.
@@ -88,7 +88,7 @@ skipped.
     - The chord set type (`native-instruments-chord-set`).
     - The version (currently set to "1.0.0").
 
-## Output Files
+## Output files
 
 - The generated JSON files are saved in the parent directory relative to the **sets** folder.
 - The file name is generated using the following pattern:  
@@ -96,7 +96,7 @@ skipped.
   where **X** is the sequential number of the processed chord set.
 - The utility will create up to 16 JSON files (the limit is defined in the code by the constant `maxSetNumber`).
 
-## How to Run the Utility
+## How to run the utility
 
 1. Create a **sets** folder anywhere on your computer.
 2. Inside the **sets** folder, create up to 16 subfolders with chord sets following
@@ -115,11 +115,16 @@ skipped.
     - **Windows:** `C:\Users\username\AppData\Local\Native Instruments\Shared\User Chords\`
 9. Open Maschine 3.0, load the chord sets, and start creating music.
 
-## Platform Limitations
+## Platform limitations
 
 The program has been tested only on MacOS. Using on other operating systems is not guaranteed.
 
-## Authors and Notes
+## Authors and notes
 
 **Maschine Chords Converter** is created by Mikhail Soldatkin (c) 2025.  
 **Maschine** is a trademark of **Native Instruments**.
+
+## You can follow me on
+
+[Spotify](https://open.spotify.com/artist/5y9uI0PQYtxPYZEL3X88JR)  
+[Bandcamp](https://inchange.bandcamp.com/)  
