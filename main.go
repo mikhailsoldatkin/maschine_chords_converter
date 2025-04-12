@@ -33,9 +33,10 @@ const (
 	midiExtension       = ".mid"
 	baseChordName       = "Chd" // for empty chords
 	baseNote            = 60    // C3
-	maxSetFolderNameLen = 10    // maximum length of set folder name
+	maxSetFolderNameLen = 8     // maximum length of set folder name
 	minChordNumber      = 1
 	maxChordNumber      = 12
+	maxSetNumber        = 16
 )
 
 var setNumber = 1
@@ -77,7 +78,7 @@ func main() {
 func processChordSet(path, currentSet, setsFolder string) {
 	fmt.Println("Processing set:", currentSet)
 
-	if setNumber > maxChordNumber {
+	if setNumber > maxSetNumber {
 		return
 	}
 
