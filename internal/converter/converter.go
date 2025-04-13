@@ -94,7 +94,7 @@ func (c *Converter) getSetsFolder() error {
 	c.setsFolder = filepath.Dir(execPath)
 
 	if c.debug {
-		c.setsFolder = "./sets"
+		c.setsFolder = "sets"
 	}
 
 	return nil
@@ -109,6 +109,10 @@ func (c *Converter) processSetsFolder() error {
 
 		// only process directories that are not the root folder and whose names are within the allowed length
 		if dir.IsDir() && path != c.setsFolder && len(dir.Name()) <= maxSetFolderNameLen {
+			if dir.Name() == c.setsFolder { // TODO figure out
+				return nil
+			}
+
 			if err = c.processOneSetFolder(path, dir.Name()); err != nil {
 				return fmt.Errorf("error processing set folder %s: %w", path, err)
 			}
