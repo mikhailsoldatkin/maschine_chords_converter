@@ -25,6 +25,7 @@ const (
 	minChordNumber      = 1       // the minimum allowed chord number
 	maxChordNumber      = 12      // the maximum allowed chord number (and, consequently, the number of chords in a set)
 	maxSetNumber        = 16      // the maximum number of chord sets that can be processed
+	setsFolderName      = "sets"  // the maximum number of chord sets that can be processed
 
 )
 
@@ -94,7 +95,7 @@ func (c *Converter) getSetsFolder() error {
 	c.setsFolder = filepath.Dir(execPath)
 
 	if c.debug {
-		c.setsFolder = "sets"
+		c.setsFolder = setsFolderName
 	}
 
 	return nil
@@ -109,7 +110,7 @@ func (c *Converter) processSetsFolder() error {
 
 		// only process directories that are not the root folder and whose names are within the allowed length
 		if dir.IsDir() && path != c.setsFolder && len(dir.Name()) <= maxSetFolderNameLen {
-			if dir.Name() == c.setsFolder { // TODO figure out
+			if dir.Name() == setsFolderName {
 				return nil
 			}
 
