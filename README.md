@@ -120,10 +120,6 @@ skipped.
     - **Windows:** `C:\Users\username\AppData\Local\Native Instruments\Shared\User Chords\`
 10. Open Maschine 3.0, load the chord sets, and start creating music.
 
-## Platform limitations
-
-The program has been tested only on MacOS. Using on other operating systems is not guaranteed.
-
 ## Authors and notes
 
 **Maschine Chords Converter** is created by Mikhail Soldatkin (c) 2025.  
