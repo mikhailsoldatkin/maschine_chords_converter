@@ -25,7 +25,7 @@ const (
 	minChordNumber      = 1       // the minimum allowed chord number
 	maxChordNumber      = 12      // the maximum allowed chord number (and, consequently, the number of chords in a set)
 	maxSetNumber        = 16      // the maximum number of chord sets that can be processed
-	setsFolderName      = "sets"  // the maximum number of chord sets that can be processed
+	setsFolderName      = "sets"  // folder name for chord sets
 )
 
 // re regular expression used to validate and parse MIDI file names. Expected file name format: "12 Amin9.mid" or "1 Cmin.mid"
